@@ -415,25 +415,25 @@ img {
 }
 
 .hero-text-block {
-  max-width: 600px;
+  max-width: 540px;
   pointer-events: auto;
 }
 
 .hero-name {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 7vw, 6rem);
+  font-size: clamp(2.5rem, 5.2vw, 5.5rem);
   font-weight: 900;
   letter-spacing: -0.02em;
-  line-height: 1;
+  line-height: 1.05;
   color: var(--text-primary);
   text-transform: uppercase;
   margin-bottom: var(--space-sm);
-  text-shadow: 0 2px 40px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .hero-subtitle {
   font-family: var(--font-display);
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(1rem, 1.8vw, 1.35rem);
   font-weight: 400;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -442,7 +442,7 @@ img {
 }
 
 .hero-desc {
-  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  font-size: clamp(0.9rem, 1.1vw, 1.05rem);
   line-height: 1.8;
   color: var(--text-secondary);
   max-width: 480px;
@@ -904,7 +904,7 @@ img {
   }
 
   .hero-text-block {
-    max-width: 700px;
+    max-width: 580px;
   }
 }
 

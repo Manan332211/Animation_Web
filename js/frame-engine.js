@@ -82,7 +82,10 @@ class FrameEngine {
     const scale = Math.max(cw / iw, ch / ih);
     const dw = iw * scale;
     const dh = ih * scale;
-    const dx = (cw - dw) / 2;
+    
+    // Shift bottle to the right on desktop to prevent overlap with left-aligned text
+    const shift = window.innerWidth >= 1024 ? (cw * 0.16) : 0;
+    const dx = (cw - dw) / 2 + shift;
     const dy = (ch - dh) / 2;
 
     this.ctx.clearRect(0, 0, cw, ch);
