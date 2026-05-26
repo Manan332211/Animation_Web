@@ -1,6 +1,6 @@
 /**
  * ═══════════════════════════════════════════════════════════════
- *  FRAME ENGINE
+ *  FRAME ENGINE (V2)
  *  Canvas-based, scroll-driven image sequence renderer.
  *  Preloads frames progressively and draws to a <canvas> element.
  * ═══════════════════════════════════════════════════════════════
@@ -75,7 +75,10 @@ class FrameEngine {
     this.currentIndex   = idx;
     this.lastDrawnIndex = idx;
 
-    const { width: cw, height: ch } = this.canvas;
+    // Use logical viewport dimensions to calculate scale and offsets.
+    // This avoids double-scaling when display has devicePixelRatio > 1.
+    const cw = window.innerWidth;
+    const ch = window.innerHeight;
     const { naturalWidth: iw, naturalHeight: ih } = img;
 
     // Cover-style draw

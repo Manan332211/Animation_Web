@@ -83,13 +83,7 @@ class FrameEngine {
     const dw = iw * scale;
     const dh = ih * scale;
     
-    // The bottle is offset to the right in the source images (about 190px from center at 1920px width).
-    // We shift the image left to center the bottle, but limit it so the right edge never goes off-screen.
-    const idealShift = 190 * scale;
-    const maxShift = Math.max(0, (dw - cw) / 2);
-    const shift = Math.min(idealShift, maxShift);
-    
-    const dx = (cw - dw) / 2 - shift;
+    const dx = (cw - dw) / 2;
     const dy = (ch - dh) / 2;
 
     this.ctx.clearRect(0, 0, cw, ch);
